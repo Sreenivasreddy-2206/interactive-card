@@ -6,16 +6,17 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(to left,rgb(175, 103, 115),rgb(127, 131, 119));
+       background-image:  linear-gradient(to left,pink,rgb(0, 238, 255));
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
     }
     .message {
-      background-color : lightgreen;
+      
+      position : absolute;
+      top :500px;
       padding: 2rem;
-      border-radius: 10px;
         box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
       text-align: center;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -23,12 +24,96 @@
     .message h1 {
       color: #000000;
     }
+    .a{
+      background-color : #ffffff;
+      position : absolute;
+      top :200px;
+      width: 370px;
+      height : 180px;
+      background-image: url("last1.jpg");
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 2px 1px 6px 5px rgba(7, 7, 7, 0.918);
+      text-align: left;
+    
+    }
+
+  button{
+width: 200px;
+position: relative;
+top:310px ;
+padding: 12px 20px;
+border: 2px solid #dfe1e5;
+border-radius: 24px;
+box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+font-size: 16px;
+outline: none;
+transition: box-shadow 0.2s ease-in-out;
+    }
+
+
+
+button:hover{
+
+
+    height : 50px;
+    width : 200px;
+    box-shadow : 3px 3px 8px 8px rgb(6, 224, 104);
+
+
+}
+
+    .a:hover{
+ background-color : #ffffff;
+      position : absolute;
+      top :200px;
+      width: 370px;
+      height : 180px;
+      border : 5px solid black;
+
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 8px 3px 10px 10px rgba(7, 7, 7, 0.918);
+      text-align: left;
+
+    }
   </style>
 </head>
+
+
 <body>
-  <div class="message">
-    <h1 style="font-size : 100px;"><b> <i>Thank You!</i></b></h1>
-    <p style = "font-size: 25px;">Your card information has been submitted successfully.</p>
+  <div class="a">
+
+    <div id="card-info" style="margin-top: 20px; font-size: 20px; color: #000;"></div>
+
+
   </div>
+      
+  <div class="message">
+    <h1><b><i>Thank You!</i></b></h1>
+    <p style="font-size: 25px;">Your card information has been submitted successfully.</p>
+  
+  </div>
+
+  <script>
+    const name = localStorage.getItem("cardholderName");
+    const number = localStorage.getItem("cardNumber");
+    const expiry = localStorage.getItem("expiryDate");
+    const cvc = localStorage.getItem("cvc");
+
+    if (name && number && expiry && cvc) {
+      document.getElementById("card-info").innerHTML = `
+       
+         ${number}<br><br>
+         ${expiry}<br><br>
+           ${name}<br><br>
+ 
+      `;
+    }
+  </script>
+
+    <div class="uu">
+       <a href = "index.html"> <button><b>Continue</b></button> </a>
+      </div>
 </body>
 </html>
