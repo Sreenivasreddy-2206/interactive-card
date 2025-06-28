@@ -35,7 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
 
     if (validateForm()) {
-      
+      // Store data in localStorage
+      localStorage.setItem("cardholderName", nameInput.value);
+      localStorage.setItem("cardNumber", numberInput.value);
+      localStorage.setItem("expiryDate", expiryInput.value);
+      localStorage.setItem("cvc", cvcInput.value);
+
       window.location.href = "thanku.html";
     }
   });
