@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Interactive card</title>
+
+
+  <style>
+
+
+    body{
+
+        background-image:  linear-gradient(to left,pink,rgb(0, 238, 255));
+    }
+
+
+
+.outbox{
+    
+
+    
+    position: absolute;
+    text-align :center;
+    border : 1px solid;
+    border-radius: 10%;
+    height: 750px;
+    width: 500px;
+    left : 710px;
+    top : 150px;
+    box-shadow : 0px 1px 1px 1px rgb(221, 5, 203);
+
+
+}
+.outbox:hover{
+
+    box-shadow : 3px 3px 8px 8px rgb(243, 9, 185);
+
+}
+
+
+input{
+
+    box-shadow : 0px 1px 1px 1px rgb(201, 14, 14);
+
+
+height : 70px;
+
+
+    width: 400px;
+    padding: 12px 20px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    font-size: 16px;
+    outline: none;
+    transition: box-shadow 0.5s ease-in-out;
+    }
+
+
+
+input:hover{
+
+
+height : 75px;
+width : 400px;
+box-shadow : 3px 3px 8px 8px;
+
+
+}
+
+    button{
+width: 200px;
+position: relative;
+top:0% ;
+padding: 12px 20px;
+border: 2px solid #dfe1e5;
+border-radius: 24px;
+box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+font-size: 16px;
+outline: none;
+transition: box-shadow 0.2s ease-in-out;
+    }
+
+
+
+button:hover{
+
+
+    height : 50px;
+    width : 200px;
+    box-shadow : 3px 3px 8px 8px rgb(6, 224, 104);
+
+
+}
+
+.uu{
+    
+    position: relative;
+    top : 100px;
+
+}
+
+
+
+
+
+
+
+
+
+  </style>
+
+</head>
+<body>
+
+<div class="outbox">
+  <div class="in">
+    <h1><b><i>Enter card details</i></b></h1>
+
+    <form id="card-form">
+      <label>
+        <input id="cardholder-name" type="text" placeholder="Enter cardholder name" required>
+      </label>
+      <br><br>
+
+      <input id="card-number" type="text" placeholder="Enter card number" required>
+      <br><br>
+
+      <input id="expiry-date" type="text" placeholder="MM/YY" required>
+      <br><br>
+
+      <input id="cvc" type="text" placeholder="Enter CVC number" maxlength="3" required>
+      <br><br><br>
+
+      <div class="uu">
+        <button type="submit"><b>Confirm</b></button>
+      </div>
+    </form>
+
+    <div id="error-messages" style="color:red;"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
